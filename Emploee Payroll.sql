@@ -33,3 +33,11 @@ where EmployeeName='Rujula';
 Update employee_payroll 
 set Gender='F'
 where EmployeeName='Ashaya Sivakumar' or EmployeeName='Harsha Varghese'or EmployeeName='Gayatri KG';
+
+------- UC 7: Use Aggregate Functions and Group by Gender -------
+
+select Sum(Salary) as "TotalSalary",Gender from employee_payroll group by Gender;
+select Avg(Salary) as "AverageSalary",Gender from employee_payroll group by Gender;
+select Min(Salary) as "MinimumSalary",Gender from employee_payroll group by Gender;
+select Max(Salary) as "MaximumSalary",Gender from employee_payroll group by Gender;
+select count(Salary) as "CountSalary",Gender from employee_payroll group by Gender;
