@@ -22,3 +22,14 @@ select * from employee_payroll;
 ------- UC 5: Select Query using Cast() an GetDate() -------
 select Salary from employee_payroll where EmployeeName='Rujula';
 select Salary from employee_payroll where StartDate BETWEEN Cast('2007-11-12' as Date) and GetDate();
+
+------- UC 6: Add Gender Column and Update Table Values -------
+Alter table employee_payroll
+add Gender char(1);
+
+Update employee_payroll 
+set Gender='M'
+where EmployeeName='Rujula';
+Update employee_payroll 
+set Gender='F'
+where EmployeeName='Ashaya Sivakumar' or EmployeeName='Harsha Varghese'or EmployeeName='Gayatri KG';
