@@ -18,3 +18,7 @@ Insert into employee_payroll(EmployeeName,Salary,StartDate) values
 
 ------- UC 4: Retrieve all Data -------
 select * from employee_payroll;
+
+------- UC 5: Select Query using Cast() an GetDate() -------
+select Salary from employee_payroll where EmployeeName='Rujula';
+select Salary from employee_payroll where StartDate BETWEEN Cast('2007-11-12' as Date) and GetDate();
