@@ -76,4 +76,8 @@ where Gender='M';
 update employee_payroll
 set NetPay=(BasicPay - Deduction)
 update employee_payroll
-set TaxablePay=0,IncomeTax=0
+set NetPay=0,Deduction=0
+
+------- UC 10: Adding another Value for Rujula in Editing Department -------
+
+Insert into employee_Payroll(EmployeeName,BasicPay,StartDate,Address,EmployeePhoneNumber,EmployeeDepartment) values ('Rujula',250000,'2019-04-20','Chennai,TN','9600054540','Editing');
